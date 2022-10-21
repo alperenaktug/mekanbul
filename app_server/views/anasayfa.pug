@@ -1,69 +1,28 @@
 extends layout
+include fonksiyonlar/yildiz
 block content
   #banner.page-header 
     .row 
       .col-lg-6 
         h1 
-          | MekanBul 
-          small &nbsp;  Civardaki mekanları keşfet!
-  .row 
-    .row.list-group 
-    .col-xs-12.col-sm-12 
-      .col-xs-12.list-group-item
-        h4 
-          a(href='/mekan')  Trigo Cafe   
-          small &nbsp;
-          span.glyphicon.glyphicon-star
-          span.glyphicon.glyphicon-star
-          span.glyphicon.glyphicon-star
-          span.glyphicon.glyphicon-star
-          span.glyphicon.glyphicon-star
-        span.badge.pull-right.badge-default 4km
-        p.address SDÜ Batı  Kampüsü
-        p 
-          span.label-warning  Mühendis Gençler  
-          | &nbsp;
-          span.label.label-warning Sinan Hoca
-
-    .row.list-group 
-    .col-xs-12.col-sm-12 
-      .col-xs-12.list-group-item
-        h4 
-          a(href='/mekan')  Mackbear Cafe
-          small &nbsp;
-          small &nbsp;
-          span.glyphicon.glyphicon-star
-          span.glyphicon.glyphicon-star
-          span.glyphicon.glyphicon-star
-          span.glyphicon.glyphicon-star-empty
-          span.glyphicon.glyphicon-star-empty
-        span.badge.pull-right.badge-default 2km
-        p.address SDÜ Batı  Kampüsü
-        p 
-          span.label-warning Mühendis Gençler 
-          | &nbsp;
-          span.label.label-warning Sinan Hoca
-
-    .row.list-group 
-    .col-xs-12.col-sm-12 
-      .col-xs-12.list-group-item
-        h4 
-          a(href='/mekan')  Starbucks Cafe
-          small &nbsp;
-          small &nbsp;
-          span.glyphicon.glyphicon-star
-          span.glyphicon.glyphicon-star
-          span.glyphicon.glyphicon-star-empty
-          span.glyphicon.glyphicon-star-empty
-          span.glyphicon.glyphicon-star-empty
-        span.badge.pull-right.badge-default 0km
-        p.address SDÜ Batı  Kampüsü
-        p 
-          span.label-warning Mühendis Gençler 
-          | &nbsp;
-          span.label.label-warning Sinan Hoca
-
-
+          | #{sayfaBaslik.siteAd} 
+          small &nbsp;  #{sayfaBaslik.slogan}
+  .row
+    each mekan in mekanlar 
+      .row.list-group 
+      .col-xs-12.col-sm-12 
+        .col-xs-12.list-group-item
+          h4 
+             a(href='/mekan')  #{mekan.ad}  
+             small &nbsp;
+             +puanOlustur(mekan.puan)     
+          span.badge.pull-right.badge-default=  mekan.mesafe
+          p.address=  mekan.adres
+          p
+            each imkan in mekan.imkanlar 
+              span.label-warning= imkan
+              | &nbsp;
+         
 
  
 
