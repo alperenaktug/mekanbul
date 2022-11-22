@@ -29,10 +29,7 @@ var router =express.Router();
           "imkanlar":["Kahve","Çay","Pasta"],
           "mesafe": "5km"
         }
-        
-
-      ]
-    
+      ] 
   }
   );
    }
@@ -76,8 +73,6 @@ var router =express.Router();
           
         }
       ]
-
-      
 
      }
     
