@@ -4,8 +4,9 @@
 
 
 
-[markdown resim](koordinat.png)
 
+
+![koordinat](https://user-images.githubusercontent.com/115136572/203395655-0f8ee6db-12a2-4520-b992-19631cdd58d7.png)
 
 
 
@@ -15,7 +16,8 @@
 
 
 
-[markdown resim](mekan.png)
+![mekan](https://user-images.githubusercontent.com/115136572/203395697-a294a7fb-dc58-4a10-bfa6-1208ea405e74.png)
+
 
 
 
@@ -26,7 +28,8 @@
 
 
 
-[markdown resim](yorum.png)
+
+![yorum](https://user-images.githubusercontent.com/115136572/203395748-de07baaf-dc2c-46a7-b6c7-28028ad59fd6.png)
 
 
 
